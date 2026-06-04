@@ -1,0 +1,202 @@
+%!TEX TS-program = xe\hbox{\LaTeX}
+\documentclass[10pt]{article}
+
+\usepackage[a4paper,margin=1.55cm]{geometry}
+\usepackage{fontspec}
+\usepackage{paracol}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\definecolor{royalblue}{HTML}{003399}
+
+\setmainfont[
+    Path = ./,
+    UprightFont = *-Regular,
+    ItalicFont  = *-Italic,
+    BoldFont    = *-Smbd,
+    BoldItalicFont = *-SmbdItalic
+]{ArnoPro}
+
+\titleformat{\section}
+  {\large\bfseries\color{royalblue}}
+  {}
+  {0pt}
+  {}
+  [\vspace{-3pt}\color{royalblue}\titlerule]
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2.2pt}
+\setlength{\emergencystretch}{1em}
+\setlist[itemize]{left=7pt, itemsep=-0.5pt, topsep=2pt, parsep=0pt}
+
+\newcommand{\role}[2]{%
+  \item {\fontsize{11.4pt}{13pt}\selectfont\textbf{#1}}\hfill\textit{#2}\\[-1pt]
+}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=royalblue,
+    linkcolor=royalblue
+}
+
+\begin{document}
+
+\noindent
+\begin{minipage}[t]{0.55\textwidth}
+    {\huge \textbf{Srikanth Mohankumar}}\\[4pt]
+    {\large\raggedright\textit{Engineering Lead | SaaS \& Automation Platforms}}
+\end{minipage}
+\begin{minipage}[t]{0.43\textwidth}
+    \raggedleft
+    Tamil Nadu, India\\
+    +91\,8526629711\\
+    \href{mailto:srikanthmohankumar@gmail.com}{srikanthmohankumar@gmail.com}\\
+    \href{https://www.linkedin.com/in/srikanth-mohankumar}{linkedin.com/in/srikanth-mohankumar}\\
+    \href{https://github.com/Srikanth-Mohankumar}{github.com/Srikanth-Mohankumar}\\
+    \href{https://ctan.org/author/mohankumar}{ctan.org/author/mohankumar}
+\end{minipage}
+
+\vspace{-8pt}
+
+\columnratio{0.25,0.70}
+\setlength{\columnsep}{0.65cm}
+\begin{paracol}{2}
+
+\section*{Skills}
+\textbf{SaaS \& Architecture}\\
+Cloud-native design, APIs, scalable backends, product thinking\\[-8pt]
+
+\textbf{AI \& LLMs}\\
+AI agents, RAG, vector stores, NLP, prompt engineering\\[-8pt]
+
+\textbf{Cloud / DevOps}\\
+AWS, GCP, Docker, Linux, CI and CD\\[-8pt]
+
+\textbf{Backend \& Data}\\
+Python, Node.js, FastAPI, Redis, MongoDB, REST APIs\\[-8pt]
+
+\textbf{Publishing Systems}\\
+LaTeX, LuaTeX, TeX4ht, XML, XSLT, PDF, accessibility\\[-8pt]
+
+\textbf{Leadership}\\
+Mentoring, Scrum, RCA, delivery coordination
+
+\section*{Certifications}
+\textbf{GenAI/LLM Programme}\\
+TNQ Tech, 40 hours: LLMs, agents, embeddings, automation.
+
+\textbf{AI Credentials}\\
+LangGraph agents, Anthropic AI Fluency, Claude Code — Mar 2026.
+
+\section*{Conferences}
+\textbf{TUG 2025}\\
+In-person, Kerala, India — structure, language, accessibility, and TeX.\\
+\href{https://tug.org/tug2025}{tug.org/tug2025}
+
+\textbf{TUG 2026}\\
+Remote participation — Calgary programme on typography, publishing, tagged PDF.\\
+\href{https://tug.org/tug2026}{tug.org/tug2026}
+
+\section*{Education}
+\textbf{B.E. Electrical \& Electronics}\\
+Kingston Engineering College, Vellore, Tamil Nadu.
+
+\switchcolumn
+
+\section*{Summary}
+Engineering Lead and SaaS Product Builder with 8+ years in \textbf{publishing technology}, building cloud-native automated typesetting platforms, AI-assisted content transformation systems, and workflow tools. Promoted to \textbf{Engineering Lead} at TNQ Tech in \textbf{April 2026}. Strong product mindset across feasibility analysis, user-story refinement, sprint flow, RCA, mentoring, and stakeholder-facing prototypes.
+
+\section*{Career Evolution \& Experience}
+\begin{itemize}[leftmargin=*, label={\textbullet}]
+
+\role{Engineering Lead — Product, Prototyping \& SaaS Automation}{Apr 2026 -- Present}
+\textit{TNQ Tech, Chennai, Tamil Nadu, India}
+\begin{itemize}
+  \item Lead platform engineering for automated typesetting, SaaS delivery, GenAI demos, and stakeholder-facing prototypes
+  \item Coordinate product, production, QA, and engineering teams on ambiguous enterprise publishing workflow problems
+  \item Mentor engineers and production technologists; improve predictability through Scrum, Kanban, RCA, and workflow design
+\end{itemize}
+
+\role{Software Engineer — Product \& Prototyping}{Dec 2022 -- Mar 2026}
+\textit{TNQ Tech, Chennai, Tamil Nadu, India}
+\begin{itemize}
+  \item Core contributor to \textbf{NeoPage}, a cloud-based automated typesetting SaaS platform reducing licensed-tool dependency
+  \item Achieved \textbf{2x performance improvement} via on-the-fly PDF pagination (10--30s vs.\ 60+s)
+  \item Built distributed content transformation services using Python, Node.js, FastAPI, Docker, AWS Lambda, and MongoDB
+  \item Built LLM demos and GenAI showcases to modernize legacy publishing pipelines
+\end{itemize}
+
+\role{Team Lead}{Apr 2022 -- Nov 2022}
+\textit{Lapiz Digital Services, Ranipet, Tamil Nadu, India}
+\begin{itemize}
+  \item Led a 35+ member production team across SLA-heavy publishing projects; managed delivery, QC, RCA, mentoring, workload planning, and automation-oriented improvements
+\end{itemize}
+
+\role{Template Developer}{Apr 2021 -- Mar 2022}
+\textit{Integra Software Services, Puducherry, India}
+\begin{itemize}
+  \item Developed LaTeX journal/book templates, pagination logic, reusable style components, and publisher-specific production workflows
+\end{itemize}
+
+\role{LaTeX Production \& Automation}{Sep 2017 -- Mar 2021}
+\textit{Lapiz Digital Services, Ranipet, Tamil Nadu, India}
+\begin{itemize}
+  \item Progressed from Trainee to Technical Associate; built LaTeX macros, scripts, reusable tooling, and workflow standards
+  \item Achieved \textbf{4x productivity improvement}; handled complex pagination, revision cycles, and junior mentoring
+\end{itemize}
+
+\end{itemize}
+
+\section*{Role Impact}
+\textbf{Platform delivery:} SaaS publishing workflows, automated typesetting, and stakeholder-facing prototypes.\\
+\textbf{Operational lift:} workflow design, RCA, sprint rhythm, mentoring, and reusable production tooling.\\
+\textbf{Document engineering:} TeX, XML, PDF generation, browser pagination, and accessibility-aware publishing systems.
+
+\end{paracol}
+
+\newpage
+\section*{Selected Projects}
+\textbf{NeoView — PDF Viewer for Technical Workflows} \hfill \textit{2026}\\
+Python, PySide6, PyMuPDF · \href{https://srikanth-mohankumar.github.io/neoview/}{Website}\\
+Technical PDF viewer for font inspection, measurement, crop/export, annotations, and review-heavy publishing workflows.
+
+\textbf{authpack — LuaLaTeX Author Management} \hfill \textit{2025}\\
+LuaLaTeX · \href{https://github.com/Srikanth-Mohankumar/latex-authpack}{GitHub}\\
+Author-affiliation tooling with ORCID support and flexible scholarly publishing layouts.
+
+\textbf{enumsub — CTAN LaTeX Package} \hfill \textit{2025}\\
+\href{https://ctan.org/pkg/enumsub}{CTAN} · \href{https://ctan.org/author/mohankumar}{Contributor Profile}\\
+CTAN package for inline sublists and consistent enumeration alignment.
+
+\textbf{GenAI-Powered Editorial Assistant} \hfill \textit{2025}\\
+Streamlit, GenAI, NLP · \href{https://github.com/Srikanth-Mohankumar/email-sentiment-analysis}{GitHub}\\
+Capstone project that reads, interprets, and drafts responses to emails using NLP and sentiment analysis with a Streamlit UI and containerized backend.
+
+\textbf{Browser-Powered Pagination} \hfill \textit{2024}\\
+TeX, Lua, Emscripten, WebAssembly\\
+Custom browser pagination engine that runs TeX/Lua through WebAssembly for full pagination functionality without a desktop publishing dependency.
+
+\textbf{Support ChatBot} \hfill \textit{2023}\\
+Level 1 support automation for production-team query handling. Helped production users answer repeated workflow queries faster and keep support knowledge closer to daily operations.
+
+\section*{Professional Focus}
+I work best on systems where publishing rules, human review, and automation must meet: SaaS editorial platforms, PDF workflows, LaTeX infrastructure, AI-assisted content operations, and practical tools for production teams. Current interests include tagged and accessible PDF, browser-native pagination, agentic editorial assistance, and scalable document transformation pipelines.
+
+\section*{Project Impact Highlights}
+\textbf{Publishing automation:} reusable systems for pagination, content transformation, template logic, and review support. \textbf{Performance:} improved PDF responsiveness from 60+ seconds to 10--30 seconds. \textbf{AI prototyping:} GenAI demos around sentiment, response drafting, retrieval, and agentic support. \textbf{Team enablement:} support tooling, reusable LaTeX components, and technical handoff material.
+
+\section*{Engineering Toolkit}
+\textbf{Application:} Python, Node.js, FastAPI, Streamlit, REST APIs, Redis, MongoDB.\\
+\textbf{Cloud \& Delivery:} AWS Lambda, Docker, Linux, CI/CD workflows, feasibility analysis, MVP scoping.\\
+\textbf{Publishing:} LaTeX, LuaLaTeX, LuaTeX, TeX4ht, XML, XSLT, PDF generation, accessibility tagging concepts.\\
+\textbf{AI:} LLM agents, LangGraph learning, RAG, embeddings, vector search, NLP, prompt engineering.
+
+\section*{Community \& Learning}
+CTAN contributor through \textbf{enumsub}; continued open-source publishing-tool experiments through GitHub. Attended \textbf{TUG 2025} in person in Kerala; following \textbf{TUG 2026} remotely for accessible PDF, typography, and TeX ecosystem updates. Completed TNQ Tech GenAI/LLM programme and March 2026 AI credentials.
+
+\section*{Working Style}
+Start with real production constraints: exception cases, review points, file formats, and quality gates. Turn unclear ideas into demos, feasibility notes, user stories, and MVP slices teams can evaluate together. Current direction: accessible/tagged PDF automation, browser-native TeX workflows, and agentic tools that support editors and production teams.
+
+\end{document}
