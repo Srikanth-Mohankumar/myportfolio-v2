@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 76" role="img" aria-labelledby="title desc">
+  <title id="title">SM monogram</title>
+  <desc id="desc">An angular navy S interlocked with a forward-moving M and copper bridge.</desc>
+  <path fill="#0f2744" d="M9 10h48l17 14-13 10-11-9H27l-9 7 16 12h24l12 10-15 12H7l14-12h30l-17-13H11L0 32z"/>
+  <path fill="#0f2744" d="M66 20 82 7l18 18 22-18h10v58h-14V27l-18 16-18-16v38H68z"/>
+  <path fill="#c8873f" d="m48 42 13-10 22 18-12 10z"/>
+</svg>
