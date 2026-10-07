@@ -55,14 +55,22 @@ main, .site-footer { width: min(var(--content), calc(100% - 48px)); margin: 0 au
 .social-row { display: flex; gap: 22px; margin-top: 26px; color: var(--slate); font-size: .72rem; font-weight: 750; }
 .social-row a { display: inline-flex; align-items: center; gap: 7px; }
 
-.portrait-system { position: relative; min-height: 680px; overflow: hidden; background: #cfd9e2; isolation: isolate; }
-.portrait-system::after { content: ""; position: absolute; inset: auto 0 0; height: 42%; z-index: 1; background: linear-gradient(to top, rgba(15,39,68,.72), transparent); pointer-events: none; }
-.portrait-system > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 38%; filter: saturate(.78) contrast(1.02); }
-.portrait-grid { position: absolute; inset: 0; z-index: 2; opacity: .35; background-image: linear-gradient(rgba(255,255,255,.22) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.22) 1px, transparent 1px); background-size: 42px 42px; }
-.portrait-slice { position: absolute; z-index: 3; background: rgba(15,39,68,.83); mix-blend-mode: multiply; }
-.portrait-slice-a { inset: -8% 57% -8% 39%; transform: skewX(-17deg); }
-.portrait-slice-b { inset: -8% 6% -8% 90%; transform: skewX(-17deg); }
-.route-map { position: absolute; top: 17%; right: 5%; z-index: 5; width: 53%; height: 65%; overflow: visible; }
+.portrait-system { position: relative; min-height: 680px; overflow: hidden; background: linear-gradient(145deg, #f7fafc 0 28%, #dce5ec 28% 48%, #b9c8d4 48% 67%, #8ea4b5 67%); isolation: isolate; }
+.portrait-system::before { content: ""; position: absolute; inset: 0; z-index: 0; background: radial-gradient(circle at 70% 23%, rgba(255,255,255,.92), transparent 30%), linear-gradient(155deg, transparent 0 43%, rgba(255,255,255,.82) 43% 46%, transparent 46% 62%, rgba(15,39,68,.16) 62% 65%, transparent 65%); }
+.portrait-system::after { content: ""; position: absolute; inset: auto 0 0; height: 32%; z-index: 2; background: linear-gradient(to top, rgba(15,39,68,.54), transparent); pointer-events: none; }
+.portrait-system > img { position: absolute; z-index: 3; right: -9%; bottom: -4%; width: 112%; max-width: none; height: auto; filter: saturate(.8) contrast(.99) drop-shadow(-18px 18px 25px rgba(15,39,68,.18)); }
+.landscape-layer { position: absolute; inset: 17% -8% 0 -8%; z-index: 1; opacity: .96; }
+.landscape-layer::before, .landscape-layer::after, .landscape-layer span { position: absolute; right: 0; bottom: 0; left: 0; content: ""; transform-origin: bottom; }
+.landscape-layer::before { height: 72%; background: #d5dfe7; clip-path: polygon(0 66%, 13% 43%, 24% 57%, 39% 18%, 49% 49%, 64% 8%, 75% 51%, 88% 28%, 100% 58%, 100% 100%, 0 100%); }
+.landscape-layer::after { height: 61%; background: #aabcca; clip-path: polygon(0 69%, 18% 36%, 30% 63%, 48% 21%, 57% 58%, 72% 28%, 85% 65%, 100% 37%, 100% 100%, 0 100%); }
+.landscape-layer span:nth-child(1) { z-index: 2; height: 48%; background: #7f96a9; clip-path: polygon(0 70%, 15% 48%, 26% 72%, 45% 30%, 59% 63%, 73% 37%, 86% 75%, 100% 52%, 100% 100%, 0 100%); }
+.landscape-layer span:nth-child(2) { z-index: 3; height: 33%; background: #536f86; clip-path: polygon(0 76%, 21% 47%, 39% 75%, 55% 36%, 71% 72%, 86% 49%, 100% 68%, 100% 100%, 0 100%); }
+.landscape-layer span:nth-child(3) { z-index: 4; height: 18%; background: var(--navy); clip-path: polygon(0 72%, 22% 51%, 39% 81%, 55% 45%, 72% 77%, 88% 58%, 100% 70%, 100% 100%, 0 100%); opacity: .84; }
+.portrait-grid { position: absolute; inset: 0; z-index: 4; opacity: .25; background-image: linear-gradient(rgba(15,39,68,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(15,39,68,.18) 1px, transparent 1px); background-size: 42px 42px; }
+.portrait-slice { position: absolute; z-index: 2; background: var(--navy); }
+.portrait-slice-a { inset: -8% 76% -8% 12%; transform: skewX(-17deg); opacity: .94; }
+.portrait-slice-b { inset: -8% 2% -8% 91%; transform: skewX(-17deg); opacity: .9; }
+.route-map { position: absolute; top: 16%; right: -6%; z-index: 5; width: 50%; height: 65%; overflow: visible; }
 .route-map path { fill: none; stroke: var(--copper); stroke-width: 3; }
 .route-map circle { fill: var(--paper); stroke: var(--copper); stroke-width: 3; }
 .route-label { position: absolute; z-index: 6; padding-left: 10px; border-left: 2px solid var(--copper); color: #fff; font-size: .57rem; font-weight: 850; letter-spacing: .18em; line-height: 1.35; text-transform: uppercase; text-shadow: 0 1px 14px rgba(15,39,68,.5); }
@@ -209,9 +217,11 @@ main, .site-footer { width: min(var(--content), calc(100% - 48px)); margin: 0 au
   .button { min-height: 43px; padding: 0 14px; font-size: .63rem; }
   .social-row { gap: 15px; margin-top: 22px; }
   .portrait-system { min-height: 405px; border-top: 1px solid var(--line-dark); }
-  .portrait-system > img { object-position: 50% 34%; }
+  .portrait-system > img { right: -6%; bottom: -4%; width: 112%; }
+  .landscape-layer { inset: 10% -15% 0 -15%; }
+  .portrait-slice-a { inset: -8% 82% -8% 9%; }
   .portrait-caption { display: none; }
-  .route-map { top: 12%; right: 2%; width: 50%; height: 70%; }
+  .route-map { top: 12%; right: -9%; width: 50%; height: 70%; }
   .route-label { font-size: .45rem; }
   .label-one { top: 8%; }
   .label-two { top: 39%; }
